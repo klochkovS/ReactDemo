@@ -24,6 +24,7 @@ module.exports = {
     publicPath: bundlePath,
     filename: 'bundle.js',
   },
+  devtool: 'sourcemap',
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     port: 3000,
