@@ -9,7 +9,7 @@ const getFakeMembers = count => new Promise((resolve, reject) => {
     resolve(JSON.parse(request.response).results) :
     reject(Error(request.status.Text));
   request.onerror = err => reject(err);
-  request.sent();
+  request.send();
 });
 
 class MemberList extends Component {
