@@ -21,6 +21,8 @@ module.exports = {
         "react/jsx-no-bind": 0,
         "react/no-array-index-key": 0,
         "no-nested-ternary": 0,
+        "react/self-closing-comp": 0,
+        "no-confusing-arrow": 0,
     },
     "env": {
         "browser": 1
