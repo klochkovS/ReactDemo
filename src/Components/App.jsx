@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { v4 } from 'uuid';
 import AddColorForm from './AddColorForm';
 import ColorList from './ColorList';
-import MemberList from './MemberList';
+import HiddenMessages from './HiddenMessages';
 
 class App extends Component {
   constructor(props) {
@@ -46,6 +46,7 @@ class App extends Component {
     const { colors } = this.state;
     return (
       <div className="app">
+        <HiddenMessages />
         <AddColorForm onNewColor={addColor} />
         <ColorList
           colors={colors}

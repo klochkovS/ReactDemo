@@ -13,6 +13,7 @@ module.exports = {
     "rules": {
         "no-console": 0,
         "no-alert": 0,
+        "no-plusplus": 0,
         "no-underscore-dangle": 0,
         "no-return-assign": 0,
         "react/prefer-stateless-function": 0,
