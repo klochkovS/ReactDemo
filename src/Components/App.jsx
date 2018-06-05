@@ -46,7 +46,6 @@ class App extends Component {
     const { colors } = this.state;
     return (
       <div className="app">
-        <MemberList count={5} />
         <AddColorForm onNewColor={addColor} />
         <ColorList
           colors={colors}
