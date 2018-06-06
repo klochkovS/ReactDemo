@@ -8,7 +8,7 @@ class HiddenMessage extends Component {
     };
   }
 
-  componentWillReciveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     this.setState({ hidden: nextProps.hide });
   }
 
