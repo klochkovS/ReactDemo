@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { v4 } from 'uuid';
 import AddColorForm from './AddColorForm';
 import ColorList from './ColorList';
-import HiddenMessages from './HiddenMessages';
+import { Display, WhenFalsy, WhenTruthy } from './Display';
 
 class App extends Component {
   constructor(props) {
@@ -46,7 +46,14 @@ class App extends Component {
     const { colors } = this.state;
     return (
       <div className="app">
-        <HiddenMessages />
+        <Display ifTruthy={20 >= 21}>
+          <WhenTruthy>
+            <h1>You can enter</h1>
+          </WhenTruthy>
+          <WhenFalsy>
+            <h1>Beat it Kid</h1>
+          </WhenFalsy>
+        </Display>
         <AddColorForm onNewColor={addColor} />
         <ColorList
           colors={colors}
