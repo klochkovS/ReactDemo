@@ -3,6 +3,7 @@ import { v4 } from 'uuid';
 import AddColorForm from './AddColorForm';
 import ColorList from './ColorList';
 import RandomMeUsers from './PeopleList';
+import CountryDropDown from './CountryDropDown';
 
 class App extends Component {
   constructor(props) {
@@ -46,6 +47,7 @@ class App extends Component {
     const { colors } = this.state;
     return (
       <div className="app">
+        <CountryDropDown selected="Angola" />
         <RandomMeUsers count={10} />
         <AddColorForm onNewColor={addColor} />
         <ColorList
