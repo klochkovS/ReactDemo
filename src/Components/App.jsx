@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { v4 } from 'uuid';
 import AddColorForm from './AddColorForm';
 import ColorList from './ColorList';
-import PeopleList from './PeopleList';
+import RandomMeUsers from './PeopleList';
 
 class App extends Component {
   constructor(props) {
@@ -46,7 +46,7 @@ class App extends Component {
     const { colors } = this.state;
     return (
       <div className="app">
-        <PeopleList />
+        <RandomMeUsers count={10} />
         <AddColorForm onNewColor={addColor} />
         <ColorList
           colors={colors}
