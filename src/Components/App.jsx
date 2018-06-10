@@ -5,6 +5,7 @@ import ColorList from './ColorList';
 import RandomMeUsers from './PeopleList';
 import CountryDropDown from './CountryDropDown';
 import HidddenMessages from './HiddenMessages';
+import PopUpButton from './PopUpButton';
 
 class App extends Component {
   constructor(props) {
@@ -48,6 +49,10 @@ class App extends Component {
     const { colors } = this.state;
     return (
       <div className="app">
+        <PopUpButton hidden={true} txt="toggle popup">
+          <h1>Hidden Content</h1>
+          <p>This content will start off hidden</p>
+        </PopUpButton>
         <HidddenMessages />
         <CountryDropDown selected="Russia" />
         <RandomMeUsers count={10} />
