@@ -28,7 +28,7 @@ const DataComponent = (ComposedComponent, url) =>
         <div className="data-componetn">
           {(this.state.loading) ?
             <div>Loading...</div> :
-            <ComposedComponent {...this.state} />}
+            <ComposedComponent {...this.state} {...this.props} />}
         </div>
       );
     }

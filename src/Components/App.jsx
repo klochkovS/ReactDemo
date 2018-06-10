@@ -4,6 +4,7 @@ import AddColorForm from './AddColorForm';
 import ColorList from './ColorList';
 import RandomMeUsers from './PeopleList';
 import CountryDropDown from './CountryDropDown';
+import HidddenMessages from './HiddenMessages';
 
 class App extends Component {
   constructor(props) {
@@ -47,7 +48,8 @@ class App extends Component {
     const { colors } = this.state;
     return (
       <div className="app">
-        <CountryDropDown selected="Angola" />
+        <HidddenMessages />
+        <CountryDropDown selected="Russia" />
         <RandomMeUsers count={10} />
         <AddColorForm onNewColor={addColor} />
         <ColorList
