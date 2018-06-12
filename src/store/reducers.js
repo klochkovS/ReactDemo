@@ -15,7 +15,7 @@ export const color = (state = {}, action) => {
         state :
         {
           ...state,
-          reating: action.rating,
+          rating: action.rating,
         };
     default:
       return state;

@@ -1,8 +1,16 @@
 import React from 'react';
 import { render } from 'react-dom';
 import App from './Components/App';
+import storeFactory from './store';
 
-render(
-  <App />,
-  document.getElementById('root'),
-);
+const store = storeFactory();
+
+const r = () =>
+  render(
+    <App />,
+    document.getElementById('root'),
+  );
+
+
+store.subscribe(render);
+r();
