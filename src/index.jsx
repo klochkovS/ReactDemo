@@ -7,10 +7,10 @@ const store = storeFactory();
 
 const r = () =>
   render(
-    <App />,
+    <App store={store} />,
     document.getElementById('root'),
   );
 
 
-store.subscribe(render);
+store.subscribe(r);
 r();

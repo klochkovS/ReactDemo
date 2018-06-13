@@ -1,19 +1,20 @@
 import React from 'react';
+import { addColor } from '../actions';
 
-const AddColorForm = ({ onNewColor = f => f }) => {
+const AddColorForm = ({ store }) => {
   let _title;
   let _color;
 
   const submit = (evnt) => {
     evnt.preventDefault();
-    onNewColor(_title.value, _color.value);
+    store.dispatch(addColor(_title.value, _color.value));
     _title.value = '';
     _color.value = '#000000';
     _title.focus();
   };
 
   return (
-    <form onSubmit={submit}>
+    <form className="add-color" onSubmit={submit}>
       <input
         ref={input => _title = input}
         type="text"
