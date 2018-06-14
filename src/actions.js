@@ -15,7 +15,7 @@ export const removeColor = id => ({
   id,
 });
 
-export const reteColor = (id, rating) => ({
+export const rateColor = (id, rating) => ({
   type: C.RATE_COLOR,
   id,
   rating,

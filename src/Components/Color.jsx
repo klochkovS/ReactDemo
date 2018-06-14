@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import StarRating from './StarRating';
 
 class Color extends Component {
@@ -24,19 +23,5 @@ class Color extends Component {
     );
   }
 }
-
-Color.propTypes = {
-  title: PropTypes.string,
-  rating: PropTypes.number,
-  color: PropTypes.string,
-  onRate: PropTypes.func,
-};
-
-Color.defaultProps = {
-  title: undefined,
-  rating: 0,
-  color: '#000000',
-  onRate: f => f,
-};
 
 export default Color;
