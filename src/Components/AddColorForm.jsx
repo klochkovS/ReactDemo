@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { addColor } from '../actions';
 
 const AddColorForm = ({ store }) => {
@@ -25,6 +26,10 @@ const AddColorForm = ({ store }) => {
       <button>Add</button>
     </form>
   );
+};
+
+AddColorForm.contextTypes = {
+  store: PropTypes.object,
 };
 
 export default AddColorForm;
